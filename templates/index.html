@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>News Classifier</title>
+    </head>
+    <body>
+        <div>
+            <h2>New Classifier2</h2>
+        </div>
+        <div>
+            <a href="/">Refresh</a>
+        </div>
+        <div>
+            <form method = "POST" action="/predict">
+                <!Following is to create a text box>
+                <textarea name="rawtext" id="textbox" cols="30" rows="10"></textarea><br>
+                <select name="model_choice" id="selmodel">
+                    <option value="nb">Naive Bayes</option>
+                    <option value="logit">Logistic Regression</option>
+                    <option value="rf">Random Forest</option>
+
+                </select><br>
+                <!Following is to create a Submit and Clear buttons>
+                <button type = "reset">Clear</button>
+                <button type = "submit">Submit</button>
+            </form>
+        </div>
+        <div>
+            <p>The text entered is:</p>
+            <p>{{t}}</p>
+        </div>
+
+        <div>
+            <p>The Predictionis:</p>
+            <p>{{r}}</p>
+        </div>
+    </body>
+</html>
